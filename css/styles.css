@@ -1,0 +1,235 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg-desktop.svg) no-repeat;
+    background-size:contain;
+    background-color: var(--primary-color-bg);
+
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "section1 section2"
+     "footer footer";
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(3, 2fr);
+}
+
+
+.header{
+    grid-area:  header;
+    margin: 60px 90px;
+}
+
+
+.section-1{
+    grid-area: section1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.section-1 img{
+    width: 840px;
+    height: 600px;
+    margin-top: 30px;
+}
+
+.section-2{
+    grid-area: section2;
+    
+}
+
+.section-2 div{
+    height: 100%;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;     
+
+}
+
+.section-2 h1{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    margin: 90px 0px 15px 0px;
+    
+}
+
+.section-2 p{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    
+}
+
+
+.section-2 a.btn-register{
+    color: var(--primary-color-bg);
+    background-color: #fff;
+    width: 250px;
+    margin-top: 45px;
+    padding: 15px 50px;
+
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+
+    border-radius: 50px;
+box-shadow: 4px 7px 16px 0px rgba(31, 31, 31, 0.75);
+    
+}
+
+.section-2 a.btn-register:active{
+    background-color: var(--bg-hover-register);
+    color: #fff;
+}
+
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 65px;
+}
+
+.footer a.social{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 25px;
+
+}
+
+
+.fa-instagram{
+    padding: 9px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 155px;
+}
+
+.fa-instagram:active{
+    color: var(--bg-hover-register);
+    border-color: var(--bg-hover-register);
+}
+
+.fa-facebook-f{
+    padding: 9px 13px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.fa-facebook-f:active {
+    color: var(--bg-hover-register);
+    border-color: var(--bg-hover-register);
+}
+
+
+.fa-twitter {
+    padding: 9px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.fa-twitter:active {
+color: var(--bg-hover-register);
+    border-color: var(--bg-hover-register);
+}
+
+@media (max-width: 375px){
+    html{
+        width: 100%;
+        height: 100vh;
+    }
+    body{
+        display:flex;
+        flex-direction: column;
+        background: url(../images/bg-mobile.svg) no-repeat;
+        background-size: 500px;
+        background-color: var(--primary-color-bg);
+
+    }
+
+    .header{
+        margin: 30px;
+    }
+
+    .header img{
+        width: 170px;
+        height: 60px;
+    }
+    .section-1{
+        width: 100%;
+        height: 230px;
+        display: flex;
+        justify-content: center;
+    }
+    .section-1 img{
+        width: 310px;
+        height: 226px;
+        margin: 0;
+    }
+    div.info{
+        margin: 0px;
+        padding: 0px 0px 10px;
+        width: 100%;
+        height: 350px;
+        
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    div.info h1{
+        margin: 0px 50px 25px 50px;
+        height: 70px;
+        font-size: 25px;
+    }
+
+    div.info p{
+        margin: 0px 35px;
+        height: 140px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    div.info a.btn-register{
+        width: 200px;
+        height: 45px;
+        margin: 0px;
+        padding: 0px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer{
+        height: 100vh;
+    }
+
+    .footer a.social{
+        margin: 0px 5px;
+        font-size: 16px;
+    }
+
+    footer.footer{
+        
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fa-instagram{
+        margin: 0;
+        padding: 8px;
+        border: 1px solid #fff;
+    }
+
+}
+
+
+
